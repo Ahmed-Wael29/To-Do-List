@@ -32,7 +32,7 @@ body {
   width: 600px;
   margin: 20px auto;
   border-radius: 9px;
-  box-shadow: -2px -2px 2px var(--red-color), 2px 2px 2px var(--main-color);
+  box-shadow: -3px -3px 2px var(--red-color), 3px 3px 2px var(--main-color);
 }
 .form .input,
 .form .add {
@@ -70,10 +70,10 @@ body {
   width: 600px;
   margin: 20px auto;
   border-radius: 9px;
-  border-left: 5px solid var(--red-color);
-  border-right: 5px solid white;
-  border-top: 5px solid black;
-  border-bottom: 5px solid green;
+  border-left: 7px solid var(--red-color);
+  border-right: 7px solid white;
+  border-top: 7px solid black;
+  border-bottom: 7px solid green;
 }
 .tasks .task {
   display: flex;
