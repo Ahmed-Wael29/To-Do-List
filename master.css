@@ -1,0 +1,137 @@
+:root {
+  --main-color: rgb(32, 131, 218);
+  --alt-color: rgb(11, 74, 129);
+  --red-color: red;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 20px;
+  width: 600px;
+  margin: 20px auto;
+  border-radius: 9px;
+  box-shadow: -2px -2px 2px var(--red-color), 2px 2px 2px var(--main-color);
+}
+.form .input,
+.form .add {
+  display: flex;
+  padding: 9px;
+  border-radius: 9px;
+  border: none;
+  font-size: 18px;
+}
+.form .input {
+  flex-basis: 75%;
+  outline: none;
+  caret-color: var(--red-color);
+  color: var(--red-color);
+}
+.form .add {
+  flex-basis: 20%;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.form .add:hover,
+.form .add:active {
+  background-color: var(--alt-color);
+}
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #eee;
+  padding: 30px 20px;
+  width: 600px;
+  margin: 20px auto;
+  border-radius: 9px;
+  border-left: 5px solid var(--red-color);
+  border-right: 5px solid white;
+  border-top: 5px solid black;
+  border-bottom: 5px solid green;
+}
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 7px;
+  opacity: 0.5;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task.done {
+  opacity: 1;
+  text-decoration: line-through;
+  background-color: white;
+}
+.tasks .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: var(--red-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 991px) and (min-width: 768px) {
+  .form .input,
+  .form .add {
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .form {
+    width: 60%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+  .form .input,
+  .form .add {
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+  }
+  .form .input {
+    flex-basis: 75%;
+  }
+  .form .add {
+    flex-basis: 20%;
+    text-align: center;
+  }
+  .tasks {
+    padding: 15px;
+    width: 60%;
+  }
+  .tasks .task {
+    padding: 5px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+  .tasks .task:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
